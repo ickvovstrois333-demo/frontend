@@ -10,16 +10,16 @@ const Contacts = () => {
   const email = `${emailUser}@${emailDomain}`;
 
   return (
-    <div className="overflow-hidden pt-[15vh] min-h-[80vh] content-center">
+    <div className="overflow-hidden pt-[15vh] min-h-[80vh] content-center font-bn">
       <div className="flex flex-col bg-[radial-gradient(circle,theme(colors.secondary),theme(colors.white))]">
         <div className="flex flex-col-reverse lg:flex-row">
           {/* LEFT SIDE: Contact details */}
           <div className="min-h-[40vh] lg:w-1/2 text-center flex flex-col justify-center items-center text-primary p-6">
             <h1 className="text-4xl lg:text-5xl mb-6">{t("contacts.title")}</h1>
-            <p className="mb-6 text-lg max-w-[80vw]">
+            <p className="text-lg max-w-[80vw]">
               {t("contacts.text.normal")}
-              <b className="ml-2 text-2xl">{t("contacts.text.bold")}</b>
             </p>
+              <b className="mb-6 ml-2 text-2xl text-neutral">{t("contacts.text.bold1")}, {t("contacts.text.bold2")} {t("contacts.text.bold3")}</b>
 
             <div className="flex flex-col gap-6 w-full max-w-lg">
               <h2 className="text-lg lg:text-2xl flex items-center justify-center">
