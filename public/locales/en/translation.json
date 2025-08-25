@@ -16,7 +16,7 @@
   "footer": {
     "phone": "+359 87 962 9072",
     "email": "example@example.eu",
-    "slogan": "Contact us - and we will gladly help you!",
+    "slogan": "Contact us - and your home will thank you!",
     "social": "Socials",
     "social-links": {
       "linkedin": "https://www.linkedin.com/",
@@ -30,14 +30,14 @@
   },
   "home": {
     "title": "Who Are We?",
-    "subtitle": "Itskov Stroy is a renovation and remodeling company with a clear focus: fast, easy, and high-quality execution of your construction projects - from small improvements to complete transformations.",
+    "subtitle": "Itskov Stroy is a renovation and remodeling company with a clear focus: professional and high-quality execution of your construction projects - from small improvements to complete transformations.",
     "more": "Learn more about our:",
     "btnprojects": "Projects",
     "btnservices": "Services",
     "slogan": "Your home. Our commitment.",
-    "bold1": "Quality",
-      "bold2": "Integrity",
-      "bold3": "Reliability"
+    "bold1": "Trust",
+      "bold2": "Quality",
+      "bold3": "Professionalism"
   },
   "about": {
     "intro": {
@@ -110,7 +110,7 @@
             "Installation of concealed wiring with PVC channels or conduits",
             "Diagnostics and troubleshooting"
           ],
-          "text": "Safety, functionality, and good aesthetics - that’s our standard."
+          "text": "Safety, functionality, and good aesthetics - that's our standard."
         },
         "image": "/services-electrical.jpg"
       },
@@ -164,13 +164,13 @@
       {
         "left": {
           "title": "Painting",
-          "description": "We work fast and clean, so painting doesn’t turn into a nightmare, but a pleasure. We offer:"
+          "description": "We work fast and clean, so painting doesn't turn into a nightmare, but a pleasure. We offer:"
         },
         "right": {
           "tasks": [
             "Interior painting with latex, oil-based paint, decorative effects",
             "Consultation on colors and combinations",
-            "Surface preparation (priming, plastering if needed)",
+            "Surface preparation - priming, plastering if needed",
             "Clean and precise work - no drips or stains"
           ],
           "text": "With a new color, your home literally comes to life again."
@@ -215,9 +215,9 @@
     "title": "Contacts",
     "text": {
       "normal": "Get in touch and take the first step toward your renewed home - ",
-      "bold1": "Quality",
-      "bold2": "Integrity",
-      "bold3": "and Reliability"
+      "bold1": "Trust",
+      "bold2": "Quality",
+      "bold3": "and Professionalism."
     },
     "location": {
       "note": "Location:",
@@ -234,14 +234,14 @@
   "404page": {
     "title": "404",
     "subtitle": "Page not found",
-    "text": "Sorry, the page you are looking for doesn’t exist or has been moved. Please use the navigation above to find what you are looking for.",
+    "text": "Sorry, the page you are looking for doesn't exist or has been moved. Please use the navigation above to find what you are looking for.",
     "btn": "Go to HomePage"
   },
   "project": {
     "title": "Renovation and Repainting of Ceilings and Columns in Shopping Mall",
     "tags": "Renovation, Painting, Interior, Mall",
     "description": "We carried out a complete refresh of the interior spaces in a large shopping mall, focusing primarily on the ceilings and columns. The work included surface preparation through sanding and plastering, removal of old coatings, and application of high-quality, long-lasting paints. For the columns, we used wear-resistant coatings to ensure durability and easy maintenance, while the ceilings were painted with white dispersion paint to create a brighter and more spacious look. The project was completed within a short timeframe and with minimal disruption to the operation of the retail stores. The final result is a modern, clean, and fresh appearance that enhances the overall experience of visitors.",
-    "time": "7 working days",
+    "time": " - 7 working days",
     "mainImage": "/projects/Mall_project/1.png",
     "images": [
       "/projects/Mall_project/1.png",
