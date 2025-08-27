@@ -55,7 +55,7 @@ const AboutUsSection = () => {
       {/* Issues */}
       <div className="mt-12 w-[90vw] mx-auto">
         <h2 className="text-4xl lg:text-5xl text-center font-bold text-neutral mt-24 mb-12">{t("about.issues.title")}</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="min-w-[90vw] place-self-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {factors.map((factor, idx) => (
             <FactorCard
               key={idx}
