@@ -1,3 +1,4 @@
+// ProjectsPage.jsx
 import React, { useState, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -8,7 +9,15 @@ import ProjectPagination from "../components/ProjectPagination.jsx";
 const ProjectsPage = () => {
   const { t } = useTranslation();
 
-  const projects = t("allProjects", { returnObjects: true });
+  // normalize tags: ensure tags is always an array
+  const projects = t("allProjects", { returnObjects: true }).map((p) => ({
+    ...p,
+    tags: Array.isArray(p.tags)
+      ? p.tags
+      : typeof p.tags === "string"
+      ? p.tags.split(",").map((t) => t.trim())
+      : [],
+  }));
 
   const [currentProject, setCurrentProject] = useState(projects[0]);
   const [currentPage, setCurrentPage] = useState(0);
@@ -30,6 +39,7 @@ const ProjectsPage = () => {
     currentPage * projectsPerPage + projectsPerPage
   );
 
+  // Scroll-to-top + select project
   const handleProjectSelect = (project) => {
     setCurrentProject(project);
     setTagFilter(null);
@@ -37,6 +47,7 @@ const ProjectsPage = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  // Filter by tag only, hide current project
   const handleTagClick = (tag) => {
     setTagFilter(tag);
     setCurrentProject(null);
@@ -49,6 +60,7 @@ const ProjectsPage = () => {
         <ProjectDetails project={currentProject} onTagClick={handleTagClick} />
       )}
 
+      {/* Project grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mx-6">
         {paginatedProjects.map((project, index) => (
           <ProjectCard
@@ -59,6 +71,7 @@ const ProjectsPage = () => {
         ))}
       </div>
 
+      {/* Pagination */}
       {filteredProjects.length > projectsPerPage && (
         <ProjectPagination
           totalPages={totalPages}
