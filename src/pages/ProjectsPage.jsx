@@ -15,8 +15,8 @@ const ProjectsPage = () => {
     tags: Array.isArray(p.tags)
       ? p.tags
       : typeof p.tags === "string"
-      ? p.tags.split(",").map((t) => t.trim())
-      : [],
+        ? p.tags.split(",").map((t) => t.trim())
+        : [],
   }));
 
   const [currentProject, setCurrentProject] = useState(projects[0]);
@@ -39,15 +39,13 @@ const ProjectsPage = () => {
     currentPage * projectsPerPage + projectsPerPage
   );
 
-  // Scroll-to-top + select project
   const handleProjectSelect = (project) => {
     setCurrentProject(project);
-    setTagFilter(null);
+    setTagFilter(null); 
     setCurrentPage(0);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  // Filter by tag only, hide current project
   const handleTagClick = (tag) => {
     setTagFilter(tag);
     setCurrentProject(null);
@@ -60,18 +58,24 @@ const ProjectsPage = () => {
         <ProjectDetails project={currentProject} onTagClick={handleTagClick} />
       )}
 
-      {/* Project grid */}
+      {tagFilter && (
+        <h2 className="text-2xl lg:text-4xl font-semibold mb-6 mx-6 justify-self-center">
+          {t("filteredByTag", { tag: tagFilter }) || `Showing results for #${tagFilter}`}
+        </h2>
+      )}
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mx-6">
         {paginatedProjects.map((project, index) => (
           <ProjectCard
             key={index}
             project={project}
             onSelect={handleProjectSelect}
+            onTagClick={handleTagClick}
+            tagFilter={tagFilter}
           />
         ))}
       </div>
 
-      {/* Pagination */}
       {filteredProjects.length > projectsPerPage && (
         <ProjectPagination
           totalPages={totalPages}
